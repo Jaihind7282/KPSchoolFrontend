@@ -18,8 +18,6 @@ const StudentRegistrationForm = () => {
     motherName: "",
     fatherOccupation: "",
   });
-
-  const [receipt, setReceipt] = useState(null);
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -37,7 +35,6 @@ const StudentRegistrationForm = () => {
         "https://kpschoolbackend.onrender.com/submit-form",
         formData
       );
-      setReceipt(response.data.data);
       setFormData({});
       navigate("/receipt", { state: { receipt: response.data.data } });
     } catch (error) {
