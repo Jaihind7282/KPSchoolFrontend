@@ -24,7 +24,7 @@ const ImageSlider = () => {
   useEffect(() => {
     const intervalId = setInterval(goToNext, 3000);
     return () => clearInterval(intervalId);
-  }, []);
+  });
 
   return (
     <div className="kppublicschoolinjamui-slider-container">
